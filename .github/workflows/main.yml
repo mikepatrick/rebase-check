@@ -14,10 +14,10 @@ jobs:
       contents: read
       issues: read
     steps:
-      # Checkout PR branch
-      # - name: Checkout
-      #   id: checkout
-      #   uses: actions/checkout@v4
+      Checkout PR branch
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
         # with:
         #   fetch-depth: 0
       # Checkout main
