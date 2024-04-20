@@ -5,6 +5,9 @@
 trg=$1
 itg=$2
 
+git fetch origin main:main
+git fetch origin $GITHUB_HEAD_REF:$GITHUB_HEAD_REF
+
 if [[ -z $trg ]]; then
     trg=HEAD
 fi
