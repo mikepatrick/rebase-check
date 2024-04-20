@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
       # - name: Rebase Check
       #   id: rebase_check
-      #   run: ./check2.sh
+      #   run: ./.github/workflows/check2.sh
       - name: Rebase Check 2
         id: rebase_check_2
-        run: ./check3.sh $GITHUB_HEAD_REF main
+        run: ./.github/workflows/check3.sh $GITHUB_HEAD_REF main
