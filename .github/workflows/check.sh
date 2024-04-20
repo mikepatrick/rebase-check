@@ -11,7 +11,7 @@ git fetch origin $current_branch:$current_branch
 if [[ -z $current_branch ]]; then
     trg=HEAD
 fi
-if [[ -z $itg ]]; then
+if [[ -z $target_branch ]]; then
     target_branch=main
 fi
 
