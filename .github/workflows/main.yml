@@ -1,0 +1,25 @@
+name: Rebase check
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  rebase_check:
+    name: rebase_check
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pull-requests: read
+      actions: write
+      contents: read
+      issues: read
+    steps:
+      # Checkout repo
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+        # with:
+        #   fetch-depth: 0
+      - name: Rebase Check
+        id: rebase_check
+        run: ./check2.sh
