@@ -5,8 +5,8 @@
 current_branch=$1
 target_branch=$2
 
-git fetch origin main:main
-git fetch origin $GITHUB_HEAD_REF:$GITHUB_HEAD_REF
+git fetch origin $target_branch:$target_branch
+git fetch origin $current_branch:$current_branch
 
 if [[ -z $current_branch ]]; then
     trg=HEAD
