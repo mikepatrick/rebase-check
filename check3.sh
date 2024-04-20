@@ -24,4 +24,5 @@ else
     do
         echo $r
     done
+    exit 1
 fi
