@@ -1,5 +1,5 @@
-hash1=$(git show-ref --heads -s origin/main)
-hash2=$(git merge-base origin/main $GITHUB_HEAD_REF)
+hash1=$(git show-ref --heads -s main)
+hash2=$(git merge-base main $GITHUB_HEAD_REF)
 if [ "${hash1}" = "${hash2}" ]
 then
     echo "OK"
