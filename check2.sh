@@ -1,3 +1,4 @@
+git fetch origin main:main
 hash1=$(git show-ref --heads -s main)
 hash2=$(git merge-base main $GITHUB_HEAD_REF)
 if [ "${hash1}" = "${hash2}" ]

@@ -21,11 +21,11 @@ jobs:
         # with:
         #   fetch-depth: 0
       # Checkout main
-      - name: Check out main
-        uses: actions/checkout@master
-        with:
-          path: main
-          ref: main
+      # - name: Check out main
+      #   uses: actions/checkout@master
+      #   with:
+      #     path: main
+      #     ref: main
       - name: Rebase Check
         id: rebase_check
         run: ./check2.sh
