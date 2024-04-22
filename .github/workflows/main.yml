@@ -1,0 +1,21 @@
+name: Rebase check
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  rebase_check:
+    name: rebase_check
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pull-requests: read
+      actions: read
+      contents: read
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+      - name: Rebase Check
+        id: rebase_check
+        run: ./.github/workflows/rebase-check.sh $GITHUB_HEAD_REF $GITHUB_BASE_REF
