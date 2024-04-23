@@ -4,4 +4,4 @@ Perform a check to determine if a PR branch needs the target branch rebased onto
 
 #### Implementation
 
-If the PR branch and target branch have different parent commits
+Use two dot rev-list to detect commits that are in the base (target) branch but not the feature (PR) branch.
