@@ -2,7 +2,7 @@ name: Rebase check
 on:
   pull_request:
     branches: [ "main" ]
-
+    types: ["opened", "reopened", "synchronzie", "edited"]
 jobs:
   rebase_check:
     name: rebase_check
